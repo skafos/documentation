@@ -1,0 +1,23 @@
+site_name: Skafos API Documentation
+site_url: 
+site_description: Skafos API Documentation
+site_author: Skafos
+
+edit_uri: ""
+docs_dir: docs
+
+theme:
+    name: mkdocs
+    locale: en
+    highlightjs: true
+    hljs_style: gradient-dark
+
+extra_css: [extra.css]
+
+nav:
+  - Welcome:
+    - Overview: index.md 
+  - Docs: 
+    - performance: performance-api.md
+    - product-similarity: product-similarity-api.md
+

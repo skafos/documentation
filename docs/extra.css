@@ -1,0 +1,14 @@
+body::before {
+    background-color: #ffffff;
+    background: none;
+    font-family: Roboto, sans-serif;
+    color: #000
+}
+
+.bg-primary {
+    background-color: #666FDE;
+}
+
+a {
+    color: #F5BB02
+}
