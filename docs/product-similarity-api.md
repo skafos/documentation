@@ -1,64 +1,93 @@
 # Product Similarity API
 
-## API
-
-* Authorization will be performed via auth-v1-svcs!
-* The Shop ID will be persisted along with the Token data, so just pass the api token as a header in all skafos backend requests.
-* Staging API requests will hit the base URL: [https://api-staging.skafos.ai](https://api-staging.skafos.ai/)
-* Production API requests will hit the base URL:[https://api.skafos.ai](https://api.skafos.ai)</span>
-
-## Headers
-
-All HTTP calls will utilize the following headers:
-
-* Content-Type: application/json
-* Authorization: Bearer {JWT api token}
-
-Body
-
-* productID: shopify product ID
-* collectionID: shopify collection ID
-* count: N (integer)
-
 ## Endpoint(s)
 
-See later in doc for error format and table
+### **Similar Products**
 
-### **POST /v1/products/similar**
+??? pied-piper "Fetch Similar Products"
 
-* Fetch the N (defaults to 8) “most similar” products to an input product in a given product collection.
-* Example response:
+    Fetch the N (defaults to 8) “most similar” products to an input product in a given product collection.
 
-```js
-{
-    'statusCode': 200,
-    'statusMessage': 'OK',
-    'statusDescription': 'Request succeeded without error',
-    'result': {
-        'products': [
-            'gid://shopify/Product/152728371252', 
-            'gid://shopify/Product/4589734569865',
-            …...
-        ] 
-    }
-}
-```
+    ```
+    POST /v1/products/similar
+    ```
+    === "Request"
+
+
+
+        ``` json
+        {
+          "productID": "gid://shopify/Product/197578471252",
+          "collectionID": "gid://shopify/Collection/242584846536",
+          "count": "10"
+        }
+        ```
+        ___
+
+        Headers
+
+        ___
+
+        | Headers       |                        |
+        |---------------|------------------------|
+        | Content-Type  | application/json       |
+        | Authorization | Bearer \{JWT api token\} |
+
+        ___
+
+
+        Parameters^*\ Required^ 
+
+        ___
+
+        | Name    | Description                        |
+        |---------|------------------------------------|
+        | productID*  | shopify product ID |
+        | collectionID* | shopify collection ID |
+        | count   | N (integer) |
+
+    === "Response"
+
+        ``` json
+            {
+                "statusCode": 200,
+                "statusMessage": "OK",
+                "statusDescription": "Request succeeded without error",
+                "result": {
+                    "products": [
+                        "gid://shopify/Product/152728371252", 
+                        "gid://shopify/Product/9545794737943",
+                        "gid://shopify/Product/4324854837844",
+                        "gid://shopify/Product/4598738748734",
+                        "gid://shopify/Product/1857498373347",
+                        "gid://shopify/Product/6583953405934",
+                        "gid://shopify/Product/32903594785420",
+                        "gid://shopify/Product/40593859340322",
+                        "gid://shopify/Product/5897345694865",
+                        "gid://shopify/Product/7643983497839",
+                        
+                    ] 
+                }
+            }
+        ```
 
 ## Errors
 
 Example error:
 
-```js
+```json
     {
-        'statusCode': 401,
-        'statusMessage': 'Unauthorized',
-        'statusDescription': 'User isn't authorized to access this resource',
-        'result': {
-            'isValid': false,
-            'reason': 'Invalid credentials'
+        "statusCode": 401,
+        "statusMessage": "Unauthorized",
+        "statusDescription": "User isn't authorized to access this resource",
+        "result": {
+            "isValid": false,
+            "reason": "Invalid credentials"
         }
     }
+```
 
+```json
     {
         "statusCode": 400,
         "statusMessage": "Bad Request",
@@ -67,7 +96,9 @@ Example error:
             "reason": "Collection ID not found"
         }
     }
+```
 
+```json
     {
         "statusCode": 400,
         "statusMessage": "Bad Request",
@@ -76,7 +107,9 @@ Example error:
             "reason": "Product ID not found"
         }
     }
+```
 
+```json
     {
         "statusCode": 400,
         "statusMessage": "Bad Request",
@@ -85,7 +118,9 @@ Example error:
             "reason": "Must provide a collectionID"
         }
     }
+```
 
+```json
     {
         "statusCode": 400,
         "statusMessage": "Bad Request",
@@ -95,9 +130,3 @@ Example error:
         }
     }
 ```
-
-## Future
-
-* Collection ID no longer required.
-* Multiple Product ID inputs.
-* Body param: “attributes”: [“price”, “title”, “pdp_url”]?
