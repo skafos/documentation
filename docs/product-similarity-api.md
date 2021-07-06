@@ -1,6 +1,6 @@
 # Product Similarity API
 
-## Endpoint(s)
+## Endpoint
 
 ### **Similar Products**
 

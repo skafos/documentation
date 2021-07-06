@@ -8,7 +8,7 @@
     /* Accent Colors */
     --md-accent-fg-color:                #F5BB02;
 
-    --md-admonition-icon--pied-piper: url(Post.svg);
+    --md-admonition-icon--pied-piper: url(/assets/post.svg);
 }
 .md-typeset .admonition.pied-piper,
 .md-typeset details.pied-piper {
@@ -24,6 +24,11 @@
   background-color: #676edf;
   -webkit-mask-image: var(--md-admonition-icon--pied-piper);
           mask-image: var(--md-admonition-icon--pied-piper);
+    height: 36.2;
+    width: 102.2px;
+    left: .4rem;
+    bottom: 1.1rem;
+
   }
 
   .md-typeset .admonition, .md-typeset details {
@@ -49,7 +54,7 @@
 }
 
 .md-typeset summary {
-    padding: 1rem 1.8rem 1rem 2rem;
+    padding: 1rem 1.8rem 1rem 3.5rem;
 }
 
 .md-typeset summary:after {
@@ -74,4 +79,9 @@ body::before {
     display: block;
     height: 2rem;
     width: 8rem;
+}
+
+.md-footer {
+    background-color: #041e39;
+    color: var(--md-footer-fg-color);
 }

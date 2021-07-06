@@ -9,7 +9,8 @@ docs_dir: docs
 theme:
     name: material
     locale: en
-    logo: skafos-full.svg
+    logo: /assets/skafos-full.svg
+    favicon: /assets/favicon.png
 
 extra_css: [extra.css]
 
@@ -17,6 +18,7 @@ nav:
   - Welcome:
     - Overview: index.md 
   - Docs: 
+    - Authentication: authentication.md
     - Performance: performance-api.md
     - Product Similarity: product-similarity-api.md
 
