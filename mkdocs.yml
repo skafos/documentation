@@ -1,5 +1,5 @@
 site_name: Skafos API Documentation
-site_url: 
+site_url: https://skafos-api-documentation.readthedocs.io/en/changes/
 site_description: Skafos API Documentation
 site_author: Skafos
 
@@ -7,10 +7,10 @@ edit_uri: ""
 docs_dir: docs
 
 theme:
-    name: mkdocs
+    name: material
     locale: en
-    highlightjs: true
-    hljs_style: gradient-dark
+    logo: /assets/skafos-full.svg
+    favicon: /assets/favicon.png
 
 extra_css: [extra.css]
 
@@ -18,6 +18,35 @@ nav:
   - Welcome:
     - Overview: index.md 
   - Docs: 
-    - performance: performance-api.md
-    - product-similarity: product-similarity-api.md
+    - Authentication: authentication.md
+    - Performance: performance-api.md
+    - Product Similarity: product-similarity-api.md
+
+markdown_extensions:
+  - admonition
+  - abbr
+  - attr_list
+  - def_list
+  - footnotes
+  - meta
+  - md_in_html
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.tabbed
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+  - pymdownx.superfences
+ 
+
 
