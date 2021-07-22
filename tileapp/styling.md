@@ -38,8 +38,13 @@ Let's see what this does:
 ![Updated Title Fonts](updated-title-fonts.png)
 
 
-### Colors
+### Pages
 
+The Skafos Tileapp experience consists of two main pages:
+- The Discovery Page: This is where the user upvotes or downvotes Products
+- The Summary Page: This is where the user is provided with Recommendations
+
+While the structure of the pages is similar, they are a bit different. So will look at them individually.
 
 ## Discovery Page
 
@@ -178,3 +183,132 @@ h1, h2, h3, h4, h5, h6 {
 
 Here is what the page looks like:
 ![Background and Borders](./all-together-1.png)
+
+## Summary Page
+
+Here is the basic layout of the discovery page with the css class names for each section
+![Layout](./summary-page-layout.png)
+
+As you can see, most of the layout is pretty similar. The main difference is the product grid. On the discovery page, the grid is replaced with a new different one. In the header, there are only two sections, the title and subtitle.
+
+This is what the default summary page looks like:
+![Default Summary Page](./default-summary-page.png)
+
+Let's try and apply all our previous styles to this page. This is what we get:
+![Custom Summary Page](./custom-summary-1.png)
+
+We can see it didn't apply the tile background. That's because the summary page has a different product card. Let's try and apply our background properties here.
+
+```css
+.skafos-summary-card {
+    background-color: lightsteelblue;
+    padding: 10px;
+    border-radius: 5px;
+}
+```
+
+This is what happened:
+![Custom Summary Page](./custom-summary-2.png)
+
+Let's try to use all the above and some other things found from instpecting that page to make a dark theme
+```html
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Zen+Tokyo+Zoo&display=swap');
+
+* {
+    color: lightgrey;
+}
+
+body, .skafos-tiles-product-grid, .skafos-summary-product-grid, .skafos-product-image, .skafos-product-card {
+    background-color: black;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Zen Tokyo Zoo', cursive !important;
+    color: lightgrey !important;
+}
+
+.skafos-styled-tiles-product {
+    border: 1px solid lightblue;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.skafos-styled-tiles-product, .skafos-animated-product-card {
+    background-color: #222;
+}
+
+.skafos-custom-price {
+    color: skyblue;
+    font-weight: bold;
+}
+
+.skafos-summary-card {
+    background-color: #222;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.skafos-icon {
+    stroke: lightgrey !important;
+    color: lightgrey !important;
+    fill: lightgrey !important;
+    stroke-width: 1;
+}
+
+.skafos-icon path {
+    stroke: lightgrey !important;
+    color: lightgrey !important;
+    fill: lightgrey !important;
+    stroke-width: 1;
+}
+
+.skafos-like-icon {
+    stroke: #222 !important;
+    color: #222 !important;
+    fill: #222 !important;
+}
+
+.skafos-like-icon path {
+    stroke: #222 !important;
+    color: #222 !important;
+    fill: #222 !important;
+}
+
+.skafos-dislike-icon {
+    stroke: #222 !important;
+    color: #222 !important;
+    fill: #222 !important;
+}
+
+.skafos-dislike-icon path {
+    stroke: #222 !important;
+    color: #222 !important;
+    fill: #222 !important;
+}
+
+.skafos-icon-circle-border {
+    border-color: lightgrey !important;
+}
+
+.skafos-product-name {
+    color: lightgrey;
+}
+
+.skafos-loading-tiles {
+    background: transparent !important;
+}
+
+.skafos-popup-container {
+    background-color: #222 !important;
+}
+
+.skafos-ok-btn {
+    background-color: darkgrey !important;
+}
+</style>
+```
+
+Notice that all our icons are svg files and you can easily change the color for them globally or individually! Here is what this dark theme looks like:
+![Dark Theme Discovery](./dark-theme-discovery.png)
+![Dark Theme Discovery](./dark-theme-summary.png)
