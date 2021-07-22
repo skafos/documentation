@@ -210,6 +210,8 @@ We can see it didn't apply the tile background. That's because the summary page 
 This is what happened:
 ![Custom Summary Page](./custom-summary-2.png)
 
+## Putting it All Together
+
 Let's try to use all the above and some other things found from instpecting that page to make a dark theme
 ```html
 <style>
