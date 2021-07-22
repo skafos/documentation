@@ -1,8 +1,8 @@
 # Styling Tileapp
 
-Some basic styling for our app, which we call "Tileapp" can be done in the Skafos Product Recommendations App Dashboard such as selecting a basic set of colors and choosing from a list of fonts. However, we allow you to set styles by inserting them into the `head` element of the page. You can completely make it your own using CSS. If you are familiar with CSS, you can inspect the page to discover all our styles. Here is an overview of the layout and some examples of customization.
+Some basic styling for our app, which we call "Tileapp", can be done in the Skafos Product Recommendations App Dashboard such as selecting a basic set of colors and choosing from a list of fonts. In addition to that, we allow you to set styles by inserting them into the head element of the page. You can completely make it your own using CSS. If you are familiar with CSS, you can inspect the page to discover all our styles. 
 
-Here is what the default TileApp looks like. We will walk through styling examples on how to style this to make it completely your own:
+Here is an overview of the layout and some examples of customization. We will walk through styling examples on how to style this to make it completely your own. Here is what the default TileApp looks like:
 ![Default Product Finder](default-product-finder.png)
 
 ## The Basics
@@ -47,16 +47,19 @@ Here is the basic layout of the discovery page with the css class names for each
 ![Layout](./discovery-page-layout.png)
 
 All the content is inside the `skafos-tile-content` block. It contains three sections
-- A Header
-- The Product Grid 
-- History Panel
+- A Header (skafos-discovery-header)
+- The Product Grid (skafos-tiles-product-grid)
+- History Panel (skafos-history-panel)
 
 ### Header
+Here is the layour of the header:
+![Header Layout](./discovery-header.png)
+
 The header contains four sections:
-- Title
-- Subtitle
-- Recommendation Progress
-- Filters
+- Title (skafos-title)
+- Subtitle (skafos-subtitle)
+- Recommendation Progress (skafos-recommendation-progress)
+- Filters - This feature is coming soon
 
 ### Product Grid
 The product grid contains product cards. 8 cards on desktop and 4 on mobile.
