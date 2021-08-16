@@ -105,15 +105,21 @@
 
         ```json
           {
-              "statusCode": 200,
-              "statusMessage": "OK",
-              "statusDescription": "Request succeeded without error",
-              "result": {
-              "likes": [
-                {"date": "2021-03-01", "likes": 54},
-                {"date": "2021-03-02", "likes": 72}
+            "statusCode": 200,
+            "statusMessage": "OK",
+            "statusDescription": "Request succeeded without error",
+            "result": {
+                "likes": [
+                    {"date": "2021-03-01", "likes": 14},
+                    {"date": "2021-03-02", "likes": 23}
                 ]
-              }
+            },
+            "options": {
+                "shopID": "gid://shopify/Shop/53276901576",
+                "startDate": "2021-03-16",
+                "endDate": "2021-03-29",
+                "count": 10
+            }
           }
         ```
 
@@ -168,10 +174,16 @@
             "statusMessage": "OK",
             "statusDescription": "Request succeeded without error",
             "result": {
-            "dislikes": [
-              {"date": "2021-03-01", "dislikes": 23},
-              {"date": "2021-03-02", "dislikes": 89}
-              ]
+                "dislikes": [
+                    {"date": "2021-03-01", "dislikes": 14},
+                    {"date": "2021-03-02", "dislikes": 23}
+                ]
+            },
+            "options": {
+                "shopID": "gid://shopify/Shop/53276901576",
+                "startDate": "2021-03-16",
+                "endDate": "2021-03-29",
+                "count": 10
             }
         }
         ```
@@ -227,10 +239,16 @@
             "statusMessage": "OK",
             "statusDescription": "Request succeeded without error",
             "result": {
-            "pdpVisits": [
-              {"date": "2021-03-01", "pdpVisits": 14},
-              {"date": "2021-03-02", "pdpVisits": 23}
-              ]
+                "pdpVisits": [
+                    {"date": "2021-03-01", "pdpVisits": 14},
+                    {"date": "2021-03-02", "pdpVisits": 23}
+                ]
+            },
+            "options": {
+                "shopID": "gid://shopify/Shop/53276901576",
+                "startDate": "2021-03-16",
+                "endDate": "2021-03-29",
+                "count": 10
             }
         }
         ```
@@ -287,24 +305,29 @@
             "statusMessage": "OK",
             "statusDescription": "Request succeeded without error",
             "result": {
-              "topLikes": [
-                  {
-                        "id": "gid://shopify/Product/200MTVS176A-V", 
-                        "product": "Tuscan Baby Blue Dotted Diamond Trellis Nursery Rug", 
-                        "imageUrl": "https://www.rug-images.com/products/s/200MTVS176A.jpg", 
-                        "pdpUrl": "https://www.rugsusa.com/rugsusa/rugs/rugs-usa-dotted-diamond-trellis-nursery/baby-blue/200MTVS176A-P.html", 
-                        "likes": 94,
-                            "rank": 1
-                      },
-                  {
-                      "id": "gid://shopify/Product/200YLRM05B-V", 
-                      "product": "Gothamite Ivory Soft Awning Stripes Rug", 
-                      "imageUrl": "https://www.rug-images.com/products/s/200YLRM05B.jpg", 
-                      "pdpUrl": "https://www.rugsusa.com/rugsusa/rugs/rugs-usa-soft-awning-stripes/ivory/200YLRM05A-P.html", 
-                      "likes": 87,
-                            "rank": 2
-                  }
+                "topLikes": [
+                    {
+                        "id": "gid://shopify/Product/200MTVS176A-V",
+                        "product": "Tuscan Baby Blue Dotted Diamond Trellis Nursery Rug",
+                        "imageUrl": "https://www.rug-images.com/products/s/200MTVS176A.jpg",
+                        "pdpUrl": "https://www.rugsusa.com/rugsusa/rugs/rugs-usa-dotted-diamond-trellis-nursery/baby-blue/200MTVS176A-P.html",
+                        "pdpVisits": 35,
+                        "rank": 1
+                    }, {
+                        "id": "gid://shopify/Product/200YLRM05B-V",
+                        "product": "Gothamite Ivory Soft Awning Stripes Rug",
+                        "imageUrl": "https://www.rug-images.com/products/s/200YLRM05B.jpg",
+                        "pdpUrl": "https://www.rugsusa.com/rugsusa/rugs/rugs-usa-soft-awning-stripes/ivory/200YLRM05A-P.html",
+                        "pdpVisits": 23,
+                        "rank": 2
+                    }
                 ]
+            },
+            "options": {
+                "shopID": "gid://shopify/Shop/53276901576",
+                "startDate": "2021-03-16",
+                "endDate": "2021-03-29",
+                "count": 10
             }
         }
         ```
@@ -361,24 +384,29 @@
             "statusMessage": "OK",
             "statusDescription": "Request succeeded without error",
             "result": {
-              "topDislikes": [
-                  {
-                        "id": "gid://shopify/Product/200MTVS176A-V", 
-                        "product": "Tuscan Baby Blue Dotted Diamond Trellis Nursery Rug", 
-                        "imageUrl": "https://www.rug-images.com/products/s/200MTVS176A.jpg", 
-                        "pdpUrl": "https://www.rugsusa.com/rugsusa/rugs/rugs-usa-dotted-diamond-trellis-nursery/baby-blue/200MTVS176A-P.html", 
-                        "dislikes": 35,
-                            "rank": 1
-                      },
-                  {
-                      "id": "gid://shopify/Product/200YLRM05B-V", 
-                      "product": "Gothamite Ivory Soft Awning Stripes Rug", 
-                      "imageUrl": "https://www.rug-images.com/products/s/200YLRM05B.jpg", 
-                      "pdpUrl": "https://www.rugsusa.com/rugsusa/rugs/rugs-usa-soft-awning-stripes/ivory/200YLRM05A-P.html", 
-                      "dislikes": 23,
-                            "rank": 2
-                  }
+                "topDislikes": [
+                    {
+                        "id": "gid://shopify/Product/200MTVS176A-V",
+                        "product": "Tuscan Baby Blue Dotted Diamond Trellis Nursery Rug",
+                        "imageUrl": "https://www.rug-images.com/products/s/200MTVS176A.jpg",
+                        "pdpUrl": "https://www.rugsusa.com/rugsusa/rugs/rugs-usa-dotted-diamond-trellis-nursery/baby-blue/200MTVS176A-P.html",
+                        "pdpVisits": 35,
+                        "rank": 1
+                    }, {
+                        "id": "gid://shopify/Product/200YLRM05B-V",
+                        "product": "Gothamite Ivory Soft Awning Stripes Rug",
+                        "imageUrl": "https://www.rug-images.com/products/s/200YLRM05B.jpg",
+                        "pdpUrl": "https://www.rugsusa.com/rugsusa/rugs/rugs-usa-soft-awning-stripes/ivory/200YLRM05A-P.html",
+                        "pdpVisits": 23,
+                        "rank": 2
+                    }
                 ]
+            },
+            "options": {
+                "shopID": "gid://shopify/Shop/53276901576",
+                "startDate": "2021-03-16",
+                "endDate": "2021-03-29",
+                "count": 10
             }
         }
         ```
@@ -435,24 +463,166 @@
             "statusMessage": "OK",
             "statusDescription": "Request succeeded without error",
             "result": {
-              "topPdpVisits": [
-                  {
-                        "id": "gid://shopify/Product/200MTVS176A-V", 
-                        "product": "Tuscan Baby Blue Dotted Diamond Trellis Nursery Rug", 
-                        "imageUrl": "https://www.rug-images.com/products/s/200MTVS176A.jpg", 
-                        "pdpUrl": "https://www.rugsusa.com/rugsusa/rugs/rugs-usa-dotted-diamond-trellis-nursery/baby-blue/200MTVS176A-P.html", 
+                "topPdpVisits": [
+                    {
+                        "id": "gid://shopify/Product/200MTVS176A-V",
+                        "product": "Tuscan Baby Blue Dotted Diamond Trellis Nursery Rug",
+                        "imageUrl": "https://www.rug-images.com/products/s/200MTVS176A.jpg",
+                        "pdpUrl": "https://www.rugsusa.com/rugsusa/rugs/rugs-usa-dotted-diamond-trellis-nursery/baby-blue/200MTVS176A-P.html",
+                        "pdpVisits": 35,
+                        "rank": 1
+                    }, {
+                        "id": "gid://shopify/Product/200YLRM05B-V",
+                        "product": "Gothamite Ivory Soft Awning Stripes Rug",
+                        "imageUrl": "https://www.rug-images.com/products/s/200YLRM05B.jpg",
+                        "pdpUrl": "https://www.rugsusa.com/rugsusa/rugs/rugs-usa-soft-awning-stripes/ivory/200YLRM05A-P.html",
                         "pdpVisits": 23,
-                            "rank": 1
-                      },
-                  {
-                      "id": "gid://shopify/Product/200YLRM05B-V", 
-                      "product": "Gothamite Ivory Soft Awning Stripes Rug", 
-                      "imageUrl": "https://www.rug-images.com/products/s/200YLRM05B.jpg", 
-                      "pdpUrl": "https://www.rugsusa.com/rugsusa/rugs/rugs-usa-soft-awning-stripes/ivory/200YLRM05A-P.html", 
-                      "pdpVisits": 19,
-                            "rank": 2
-                  }
+                        "rank": 2
+                    }
                 ]
+            },
+            "options": {
+                "shopID": "gid://shopify/Shop/53276901576",
+                "startDate": "2021-03-16",
+                "endDate": "2021-03-29",
+                "count": 10
+            }
+        }
+        ```
+
+### **Funnel**
+
+??? pied-piper "Fetch Funnel Data"
+
+    The number of pageviews, impressions, sessionsWithInteractions, and pdpVisits by date for a shop or a shop collection over a date range (default is previous 14 days). 
+
+    ```
+    POST /v1/performance/funnel
+    ```
+    === "Request"
+
+
+
+        ``` json
+        {
+          "shopID": "gid://shopify/Shop/53276901576",
+        }
+        ```
+
+        ___
+
+        Headers
+
+        ___
+
+        | Headers       |                        |
+        |---------------|------------------------|
+        | Content-Type  | application/json       |
+        | Authorization | Bearer \{JWT api token\} |
+
+        ___
+
+        Parameters^*\ Required^ 
+
+        ___
+
+        | Name    | Description                        |
+        |---------|------------------------------------|
+        |shopID* | Shopify Shop ID  |
+        | collectionID  | If not supplied, will aggregate by shop |
+        | startDate | Format %Y-%m-%d; if not supplied, will use date 14 days ago |
+        | endDate   | If not supplied, will use date 1 day ago |
+        | aggregate   | Set to false to request data by date |
+
+    === "Response"
+
+        ```json
+        {
+            "statusCode": 200,
+            "statusMessage": "OK",
+            "statusDescription": "Request succeeded without error",
+            "result": {
+                "funnel": {
+                    "pageviews": 1278,
+                    "impressions": 846,
+                    "sessionsWithInteractions": 267,
+                    "pdpVisits": 64
+                }
+            },
+            "options": {
+                "shopID": "gid://shopify/Shop/53276901576",
+                "startDate": "2021-03-16",
+                "endDate": "2021-03-29",
+                "aggregate": true
+            }
+        }
+        ```
+
+### **Orders**
+
+??? pied-piper "Fetch Orders"
+
+    The cart/orders information by date for a shop or a shop collection over a date range (default is previous 14 days). 
+
+    ```
+    POST /v1/performance/orders
+    ```
+    === "Request"
+
+
+
+        ``` json
+        {
+          "shopID": "gid://shopify/Shop/53276901576",
+        }
+        ```
+
+        ___
+
+        Headers
+
+        ___
+
+        | Headers       |                        |
+        |---------------|------------------------|
+        | Content-Type  | application/json       |
+        | Authorization | Bearer \{JWT api token\} |
+
+        ___
+
+        Parameters^*\ Required^ 
+
+        ___
+
+        | Name    | Description                        |
+        |---------|------------------------------------|
+        |shopID* | Shopify Shop ID  |
+        | collectionID  | If not supplied, will aggregate by shop |
+        | startDate | Format %Y-%m-%d; if not supplied, will use date 14 days ago |
+        | endDate   | If not supplied, will use date 1 day ago |
+        | aggregate   | Set to false to request data by date |
+
+    === "Response"
+
+        ```json
+        {
+            "statusCode": 200,
+            "statusMessage": "OK",
+            "statusDescription": "Request succeeded without error",
+            "result": {
+                "orders": {
+                    "sessionsWithAddToCart": 25,
+                    "averageOrderValue": 129.99,
+                    "skafosDrivenRevenue": 1299.90,
+                    "totalStoreRevenue": 9999.99,
+                    "totalSkafosDrivenRevenue": 99.99
+                }
+            },
+            "options": {
+                "shopID": "gid://shopify/Shop/53276901576",
+                "startDate": "2021-03-16",
+                "endDate": "2021-03-29",
+                "aggregate": true
             }
         }
         ```
