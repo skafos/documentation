@@ -186,7 +186,7 @@ Here is what the page looks like:
 
 ## Summary Page
 
-Here is the basic layout of the discovery page with the css class names for each section
+Here is the basic layout of the summary page with the css class names for each section
 ![Layout](./summary-page-layout.png)
 
 As you can see, most of the layout is pretty similar. The main difference is the product grid. On the discovery page, the grid is replaced with a new different one. In the header, there are only two sections, the title and subtitle.
