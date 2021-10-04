@@ -58,6 +58,7 @@ Let's try changing the hover effect to the product image
 .skafos-image-container:hover {
   box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
 }
+</style>
 ```
 
 Let's see what that does:
