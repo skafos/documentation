@@ -50,7 +50,7 @@ It contains three main sections
 
 Here are some simple examples of custom styling:
 
-**Image**
+### Image
 Let's try changing the hover effect to the product image
 
 ```html
@@ -63,7 +63,7 @@ Let's try changing the hover effect to the product image
 Let's see what that does:
 ![Borders](./image-hover.png) 
 
-**Buttons**
+### Buttons
 Let's try changing the background and hover color to the buttons
 
 ```html
@@ -81,7 +81,7 @@ Let's try changing the background and hover color to the buttons
 Let's see what that does:
 ![Background](./button-hover.png)
 
-**Description and Price**
+### Description and Price
 Let's make the description and price a different style
 
 ```html
