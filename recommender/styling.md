@@ -2,7 +2,7 @@
 
 Some basic styling for the Product Recommender can be done in the Skafos Product Recommendations App Dashboard such as selecting a font the app should use or changeing the text copy of the header and buttons. In addition to that, we allow you to set styles by inserting them into the head element of the page. You can completely make it your own using CSS. If you are familiar with CSS, you can inspect the page to discover all the styles you are able to overwrite. We are using Material-UI under the hood, so if you know the [global class names](https://mui.com/customization/how-to-customize/#5-global-css-override), you can also directly overwrite material components' styles.
 
-Here is an overview of the layout and some examples of customization. We will walk through styling examples on how to style this to make it completely your own. Here is what the default TileApp looks like:
+Here is an overview of the layout and some examples of customization. We will walk through styling examples on how to style this to make it completely your own. Here is what the default Recommender looks like:
 ![Default Product Recommender](app-overview.png)
 
 ## The Basics
