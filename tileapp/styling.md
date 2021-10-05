@@ -57,7 +57,7 @@ All the content is inside the `skafos-tile-content` block. It contains three sec
 - History Panel (skafos-history-panel)
 
 ### Header
-Here is the layour of the header:
+Here is the layout of the header:
 ![Header Layout](./discovery-header.png)
 
 The header contains four sections:
